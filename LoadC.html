@@ -19,81 +19,59 @@
             <h3>Main equipment Nodes</h3>
 
             <ul>
-                <li>OpnetLW, Normal usage: 300W, Peak usage: 600W <button type="button">+</button> <button
-                        type="button">-</button>
+                <li>
+                    <h4>OpnetLW</h4>
+                    <p>Normal usage: 300W</p>
+                    <p>Peak usage: 600W</p>
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=200&h=200" alt="Opnet">
+                    <button type="button">+</button> <button type="button">-</button>
                     Quantity: <span class="Counter">0</span>
                 </li>
-                <li>Raven DSOC, Normal usage: 350W, Peak usage: 500W <button type="button">+</button> <button
-                        type="button">-</button>
+                <li>
+                    <h4>Raven DSOC</h4>
+                    <p>Normal usage: 350W</p>
+                    <p>Peak usage: 500W</p>
+                    <img src="https://images.unsplash.com/photo-1605051533294-ef96afbd2e50?w=200&h=200" alt="Raven">
+                    <button type="button">+</button> <button type="button">-</button>
                     Quantity: <span class="Counter">0</span>
                 </li>
-                <li>LBS Small, Normal usage: 150W, Peak usage: 300W <button type="button">+</button> <button
-                        type="button">-</button>
-                    Quantity: <span class="Counter">0</span>
-                </li>
-                <li>OLRT, Normal usage: 600W, Peak usage: 900W <button type="button">+</button> <button
-                        type="button">-</button>
-                    Quantity: <span class="Counter">0</span>
-                </li>
-                <li>Osprey, Normal usage: 300W, Peak usage: 500W <button type="button">+</button> <button
-                        type="button">-</button>
-                    Quantity: <span class="Counter">0</span>
-                </li>
-                <li>Snapper Merlin, Normal usage: 300W, Peak usage: 500W <button type="button">+</button> <button
-                        type="button">-</button>
-                    Quantity: <span class="Counter">0</span>
-                </li>
-                <li>CCT120, Normal usage: 300W, Peak usage: 500W <button type="button">+</button> <button
-                        type="button">-</button>
-                    Quantity: <span class="Counter">0</span>
-                </li>
-                <li>OneWeb, Normal usage: 100W, Peak usage: 150W <button type="button">+</button> <button
-                        type="button">-</button>
-                    Quantity: <span class="Counter">0</span>
-                </li>
-                <li>Triton, Normal usage: 100W, Peak usage: 200W <button type="button">+</button> <button
-                        type="button">-</button>
-                    Quantity: <span class="Counter">0</span>
-                </li>
-                <li>Satshield, Normal usage: 50W, Peak usage: 75W <button type="button">+</button> <button
-                        type="button">-</button>
-                    Quantity: <span class="Counter">0</span>
-                </li>
+
             </ul>
 
             <h3> Extension devices</h3>
 
             <ul>
-                <li>Modnet O Laptop, Normal usage: 50W, Peak usage: 90W <button type="button">+</button> <button
-                        type="button">-</button>
+                <li>
+                    <h4>Modnet O Laptop</h4>
+                    <p>Normal usage: 50W</p>
+                    <p>Peak usage: 90W</p>
+                    <img src="https://images.unsplash.com/vector-1739547092206-9a931584e6f4?w=200"
+                        alt="Modnet O Laptop">
+                    <button type="button">+</button> <button type="button">-</button>
                     Quantity: <span class="Counter">0</span>
                 </li>
-                <li>Modnet S Laptop, Normal usage: 50W, Peak usage: 90W <button type="button">+</button> <button
-                        type="button">-</button>
-                    Quantity: <span class="Counter">0</span>
-                </li>
-                <li>OpNet LW Laptop, Normal usage: 50W, Peak usage: 90W <button type="button">+</button> <button
-                        type="button">-</button>
-                    Quantity: <span class="Counter">0</span>
-                </li>
+
             </ul>
         </section>
 
         <section>
             <h2> Global Controls</h2>
-            <h3> Deployment length - Days</h3>
+            <h3> Deployment length</h3>
+            <label for="DeploymentLength">Enter the number of days the equipment will be deployed (1-365):</label>
             <input type="number" id="DeploymentLength" name="DeploymentLength" min="1" max="365" value="1">
-            Quantity: <span class="Counter">0</span>
+
 
             <h3>Peak running hours per day</h3>
-            <button type="button">+</button> <button type="button">-</button>
-            Quantity: <span class="Counter">0</span>
+            <label for="PeakRunningHours">Enter the number of hours the equipment will run at peak power per day
+                (0-24):</label>
+            <input type="number" id="PeakRunningHours" name="PeakRunningHours" min="0" max="24" value="0">
+
 
         </section>
 
         <section>
             <h2> Results panel</h2>
-            <p>Calculated power demands will be displayed here:</p>
+            <p>Calculated power demands will be displayed here: <span id="results">0</span> W</p>
         </section>
 
 
