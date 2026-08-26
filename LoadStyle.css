@@ -1,0 +1,43 @@
+body {
+    background-color: #f0f0f0;
+    font-family: "Arial", sans-serif;
+    max-width: 550px;
+}
+
+main {
+    ;
+    font-family: "Arial", sans-serif;
+    padding: 10px;
+}
+
+h1 {
+    ;
+    font-family: "Arial", sans-serif;
+    align-items: center;
+}
+
+h2 {
+    font-family: "Arial", sans-serif;
+    align-items: center;
+}
+
+h3 {
+    font-family: "Arial", sans-serif;
+    align-items: center;
+}
+
+ul {
+    background-color: #466060;
+    font-family: "Arial", sans-serif;
+    list-style-type: none;
+    box-sizing: border-box;
+    padding: 10px;
+    max-width: 400px;
+}
+
+li {
+    background-color: #57886C;
+    font-family: "Arial", sans-serif;
+    margin-bottom: 10px;
+    padding: 10px;
+}
