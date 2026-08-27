@@ -16,8 +16,8 @@ const cardHTML = `
     <p class="normal-usage">${'Normal Usage: ' + item.wattsNormal}W</p>
     <p class="peak-usage">${'Peak Usage: ' + item.wattsPeak}W</p>
     <img src="${item.image}" alt="${item.alt}">
-          <button class="decrease">−</button>
-      <span class="quantity">Quantity: <span class="qty-count">0</span></span>
+<span class="quantity">Quantity: <span class="qty-count">0</span></span>
+                <button class="decrease">−</button>
       <button class="increase">+</button>
   </li>
 `;
