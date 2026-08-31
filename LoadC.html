@@ -49,7 +49,37 @@
 
         <section class="resultsPanel">
             <h2> Results panel</h2>
-            <p>Calculated power demands will be displayed here: <span id="results">0</span> W</p>
+
+            <dl class="results-grid">
+                <dt>Normal total</dt>
+                <dd id="outNormalTotal">0 W</dd>
+
+                <dt>Peak total</dt>
+                <dd id="outPeakTotal">0 W</dd>
+
+                <dt>Average daily load</dt>
+                <dd id="outAverageLoad">0.0 W</dd>
+
+                <dt>Daily energy</dt>
+                <dd id="outDailyWattHours">0 Wh</dd>
+
+                <dt>Generators needed</dt>
+                <dd id="outGenerators">0</dd>
+
+                <dt>Installed capacity</dt>
+                <dd id="outInstalledCapacity">0 W</dd>
+
+                <dt>Load per generator</dt>
+                <dd id="outLoadPercentage">0.0%</dd>
+
+                <dt>Fuel band per generator</dt>
+                <dd id="outFuelRate">0.50 L/h</dd>
+
+                <dt>Total fuel</dt>
+                <dd id="outTotalFuel">0.0 L</dd>
+            </dl>
+
+            <div id="warnings" class="warning-list"></div>
         </section>
 
 
