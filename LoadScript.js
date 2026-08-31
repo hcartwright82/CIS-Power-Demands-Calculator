@@ -11,10 +11,6 @@ const FUEL_RATE_MID = 0.75;
 const FUEL_RATE_HIGH = 1.35;
 
 
-const MAX_REALISTIC_GENERATORS = 4;
-const HIGH_LOAD_PERCENTAGE = 50;
-const LOW_HEADROOM_WATTS = 100;
-
 const LAPTOP_IMAGE = 'https://images.unsplash.com/vector-1739547092206-9a931584e6f4?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wc3xlbnwwfHwwfHx8MA%3D%3D';
 const SATELLITE_IMAGE = 'https://images.unsplash.com/photo-1786945625043-f5bf06e03a2d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2F0dGVsaXRlJTIwcmVjaWV2ZXJ8ZW58MHx8MHx8fDA%3D';
 const OPNET_LAPTOP_IMAGE = 'https://images.unsplash.com/vector-1756376206471-5c5930bc84dd?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGxhcHRvcHxlbnwwfHwwfHx8MA%3D%3D';
@@ -183,14 +179,11 @@ cards.forEach(function (card) {
 const inputA = document.getElementById('DeploymentLength');
 const inputB = document.getElementById('PeakRunningHours');
 
-const warningsBox = document.getElementById('warnings');
-
 const outputs = {
     normalTotal: document.getElementById('outNormalTotal'),
     peakTotal: document.getElementById('outPeakTotal'),
     dailyWattHours: document.getElementById('outDailyWattHours'),
     generators: document.getElementById('outGenerators'),
-    installedCapacity: document.getElementById('outInstalledCapacity'),
     averageLoad: document.getElementById('outAverageLoad'),
     loadPercentage: document.getElementById('outLoadPercentage'),
     fuelRate: document.getElementById('outFuelRate'),
@@ -260,70 +253,15 @@ function formatNumber(value, decimals) {
     });
 }
 
-function buildWarnings(results) {
-    const messages = [];
-
-    if (results.peakTotal === 0) {
-        messages.push({
-            level: 'prompt',
-            text: 'No equipment selected.',
-        });
-        return messages;
-    }
-
-    if (results.generators > MAX_REALISTIC_GENERATORS) {
-        messages.push({
-            level: 'warning',
-            text: 'This fit needs ' + results.generators + ' generators. A detachment would not normally carry more than '
-                + MAX_REALISTIC_GENERATORS + ' — reduce the equipment list or plan a second power fit.',
-        });
-    }
-
-    if (results.loadPercentage > HIGH_LOAD_PERCENTAGE) {
-        messages.push({
-            level: 'warning',
-            text: 'Each generator is running at ' + formatNumber(results.loadPercentage, 1)
-                + '% of its rated output, which puts the set in the top fuel band at '
-                + formatNumber(results.fuelRate, 2) + ' L/h per generator. Budget '
-                + formatNumber(results.totalFuel, 1) + ' L for the deployment.',
-        });
-    }
-
-    const headroom = (results.generators * GENERATOR_USABLE_WATTS) - results.peakTotal;
-    if (headroom < LOW_HEADROOM_WATTS) {
-        messages.push({
-            level: 'warning',
-            text: 'Only ' + formatNumber(headroom, 0) + ' W of peak headroom left across '
-                + results.generators + ' generator(s). Almost any further kit will require another one.',
-        });
-    }
-
-    return messages;
-}
-
-function renderWarnings(messages) {
-    warningsBox.innerHTML = '';
-
-    messages.forEach(function (message) {
-        const paragraph = document.createElement('p');
-        paragraph.className = message.level;
-        paragraph.textContent = message.text;
-        warningsBox.appendChild(paragraph);
-    });
-}
-
 function displayResults(results) {
     outputs.normalTotal.textContent = formatNumber(results.normalTotal, 0) + ' W';
     outputs.peakTotal.textContent = formatNumber(results.peakTotal, 0) + ' W';
     outputs.dailyWattHours.textContent = formatNumber(results.dailyWattHours, 0) + ' Wh';
     outputs.generators.textContent = formatNumber(results.generators, 0);
-    outputs.installedCapacity.textContent = formatNumber(results.installedCapacity, 0) + ' W';
     outputs.averageLoad.textContent = formatNumber(results.averageLoad, 1) + ' W';
     outputs.loadPercentage.textContent = formatNumber(results.loadPercentage, 1) + '%';
     outputs.fuelRate.textContent = formatNumber(results.fuelRate, 2) + ' L/h';
     outputs.totalFuel.textContent = formatNumber(results.totalFuel, 1) + ' L';
-
-    renderWarnings(buildWarnings(results));
 }
 
 function recalculate() {

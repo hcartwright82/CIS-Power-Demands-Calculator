@@ -97,21 +97,6 @@ li {
     margin: 0;
 }
 
-.warning-list {
-    margin-top: 15px;
-}
-
-.warning-list p {
-    background-color: #f0f0f0;
-    border-left: 6px solid #466060;
-    margin: 8px 0;
-    padding: 8px 10px;
-}
-
-.warning-list .warning {
-    border-left-color: #a63d40;
-}
-
 @media (max-width: 430px) {
     .equipment-list {
         flex-direction: column;
