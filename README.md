@@ -1,0 +1,1 @@
+CIS Power Demands Calculator. I have designed a web page where a set Cdr can add up the quantity of CIS equipment to take on a field exercise, and the pair will give back a result of how much power is required. How many diesel generators will be needed (assuming one fep can provide 2Kw), How much fuel in litres is required, etc
