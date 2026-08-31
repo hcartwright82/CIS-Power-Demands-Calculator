@@ -17,6 +17,7 @@ const LOW_HEADROOM_WATTS = 100;
 
 const LAPTOP_IMAGE = 'https://images.unsplash.com/vector-1739547092206-9a931584e6f4?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wc3xlbnwwfHwwfHx8MA%3D%3D';
 const SATELLITE_IMAGE = 'https://images.unsplash.com/photo-1786945625043-f5bf06e03a2d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2F0dGVsaXRlJTIwcmVjaWV2ZXJ8ZW58MHx8MHx8fDA%3D';
+const OPNET_LAPTOP_IMAGE = 'https://images.unsplash.com/vector-1756376206471-5c5930bc84dd?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGxhcHRvcHxlbnwwfHwwfHx8MA%3D%3D';
 const RACK_IMAGE = 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&auto=format&fit=crop&q=60';
 
 const items = [
@@ -121,16 +122,16 @@ const items = [
         name: 'Opnet LW Laptop',
         wattsNormal: 50,
         wattsPeak: 90,
-        image: LAPTOP_IMAGE,
-        alt: 'Laptop',
+        image: OPNET_LAPTOP_IMAGE,
+        alt: 'Opnet Laptop',
     },
     {
         category: 'extension',
         name: 'Opnet Blue Laptop',
         wattsNormal: 50,
         wattsPeak: 90,
-        image: LAPTOP_IMAGE,
-        alt: 'Laptop',
+        image: OPNET_LAPTOP_IMAGE,
+        alt: 'Opnet Laptop',
     },
 ];
 
