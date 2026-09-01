@@ -13,13 +13,14 @@ const FUEL_RATE_HIGH = 1.35;
 
 const LAPTOP_IMAGE = 'https://images.unsplash.com/vector-1739547092206-9a931584e6f4?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wc3xlbnwwfHwwfHx8MA%3D%3D';
 const SATELLITE_IMAGE = 'https://images.unsplash.com/photo-1786945625043-f5bf06e03a2d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2F0dGVsaXRlJTIwcmVjaWV2ZXJ8ZW58MHx8MHx8fDA%3D';
-const OPNET_LAPTOP_IMAGE = 'https://images.unsplash.com/vector-1756376206471-5c5930bc84dd?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGxhcHRvcHxlbnwwfHwwfHx8MA%3D%3D';
+const BLUE_LAPTOP_IMAGE = 'https://images.unsplash.com/vector-1756376206471-5c5930bc84dd?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGxhcHRvcHxlbnwwfHwwfHx8MA%3D%3D';
 const RACK_IMAGE = 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&auto=format&fit=crop&q=60';
+const PHONE_IMAGE = 'https://images.unsplash.com/photo-1587560699334-bea93391dcef?w=900&auto=format&fit=crop&q=60';
 
 const items = [
     {
         category: 'primary',
-        name: 'Opnet LW',
+        name: 'Red Voice',
         wattsNormal: 300,
         wattsPeak: 600,
         image: RACK_IMAGE,
@@ -27,7 +28,7 @@ const items = [
     },
     {
         category: 'primary',
-        name: 'Raven DSOC',
+        name: 'Black Data/Voice',
         wattsNormal: 350,
         wattsPeak: 500,
         image: RACK_IMAGE,
@@ -35,7 +36,7 @@ const items = [
     },
     {
         category: 'primary',
-        name: 'LBS Small',
+        name: 'Blue Voice',
         wattsNormal: 150,
         wattsPeak: 300,
         image: RACK_IMAGE,
@@ -43,7 +44,7 @@ const items = [
     },
     {
         category: 'primary',
-        name: 'OLRT',
+        name: 'Blue Data',
         wattsNormal: 600,
         wattsPeak: 900,
         image: RACK_IMAGE,
@@ -51,7 +52,7 @@ const items = [
     },
     {
         category: 'primary',
-        name: 'Osprey',
+        name: 'Red Data',
         wattsNormal: 300,
         wattsPeak: 500,
         image: RACK_IMAGE,
@@ -59,7 +60,7 @@ const items = [
     },
     {
         category: 'primary',
-        name: 'Snapper',
+        name: 'Red Bearer',
         wattsNormal: 300,
         wattsPeak: 500,
         image: SATELLITE_IMAGE,
@@ -67,7 +68,7 @@ const items = [
     },
     {
         category: 'primary',
-        name: 'CCT120',
+        name: 'Mil Sat Com',
         wattsNormal: 300,
         wattsPeak: 500,
         image: SATELLITE_IMAGE,
@@ -75,7 +76,7 @@ const items = [
     },
     {
         category: 'primary',
-        name: 'OneWeb',
+        name: 'Civ Sat Com',
         wattsNormal: 100,
         wattsPeak: 150,
         image: SATELLITE_IMAGE,
@@ -83,7 +84,7 @@ const items = [
     },
     {
         category: 'primary',
-        name: 'Triton',
+        name: 'Small Network',
         wattsNormal: 100,
         wattsPeak: 200,
         image: RACK_IMAGE,
@@ -91,7 +92,7 @@ const items = [
     },
     {
         category: 'primary',
-        name: 'Starshield',
+        name: 'Black Bearer',
         wattsNormal: 50,
         wattsPeak: 75,
         image: SATELLITE_IMAGE,
@@ -99,7 +100,7 @@ const items = [
     },
     {
         category: 'extension',
-        name: 'Modnet O Laptop',
+        name: 'Black Laptop',
         wattsNormal: 50,
         wattsPeak: 90,
         image: LAPTOP_IMAGE,
@@ -107,7 +108,7 @@ const items = [
     },
     {
         category: 'extension',
-        name: 'Modnet S Laptop',
+        name: 'Red Laptop',
         wattsNormal: 50,
         wattsPeak: 90,
         image: LAPTOP_IMAGE,
@@ -115,19 +116,19 @@ const items = [
     },
     {
         category: 'extension',
-        name: 'Opnet LW Laptop',
+        name: 'Blue Laptop',
         wattsNormal: 50,
         wattsPeak: 90,
-        image: OPNET_LAPTOP_IMAGE,
-        alt: 'Opnet Laptop',
+        image: BLUE_LAPTOP_IMAGE,
+        alt: 'Laptop',
     },
     {
         category: 'extension',
-        name: 'Opnet Blue Laptop',
+        name: 'IP Phone',
         wattsNormal: 50,
         wattsPeak: 90,
-        image: OPNET_LAPTOP_IMAGE,
-        alt: 'Opnet Laptop',
+        image: PHONE_IMAGE,
+        alt: 'IP desk phone',
     },
 ];
 
